@@ -16,7 +16,7 @@ public class SunMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + (12 * Time.deltaTime), transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x + (sunSpeed * Time.deltaTime), transform.position.y, transform.position.z);
     }
 
     private bool CheckForPlayerCollision()

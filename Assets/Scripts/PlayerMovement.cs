@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
     Vector3 velocity;
     bool isGrounded;
+    public float deathLevel;
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +38,12 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         playerController.Move(velocity * Time.deltaTime);
+
+        if(transform.position.y < deathLevel)
+        {
+            //kill player
+            Debug.Log("Player dies");
+        }
 
     }
 }
