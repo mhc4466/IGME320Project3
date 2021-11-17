@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -42,7 +43,8 @@ public class PlayerMovement : MonoBehaviour
         if(transform.position.y < deathLevel)
         {
             //kill player
-            Debug.Log("Player dies");
+            //Debug.Log("Player dies");
+            SceneManager.LoadScene("GameOver");
         }
 
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SunMovement : MonoBehaviour
 {
@@ -39,7 +40,8 @@ public class SunMovement : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // Transition to GameOver Scene
-            Debug.Log("Player killed");
+            //Debug.Log("Player killed");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
