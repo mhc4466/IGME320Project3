@@ -197,10 +197,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 9169435690654893939, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -479,41 +475,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
-      propertyPath: maxY
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
-      propertyPath: maxZ
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
       propertyPath: platform
       value: 
       objectReference: {fileID: 295360363}
-    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
-      propertyPath: maxDist.x
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
-      propertyPath: maxDist.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
-      propertyPath: maxDist.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
-      propertyPath: minDist.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
-      propertyPath: minDist.y
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
-      propertyPath: minDist.z
-      value: -15
-      objectReference: {fileID: 0}
     - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
       propertyPath: spawnPoint
       value: 

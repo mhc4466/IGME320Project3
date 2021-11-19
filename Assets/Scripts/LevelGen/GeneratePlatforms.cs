@@ -11,12 +11,13 @@ public class GeneratePlatforms : MonoBehaviour
     public float maxY;      //limit how far up or down platforms can spawn
     public float maxZ;      //limit how far left or right platforms can spawn
 
-    private Vector3 platformSize;
+    public float separateMultiplier;   //platforms must be separated by this multiplier
+    private Bounds platformSize;
 
     // Start is called before the first frame update
     void Start()
     {
-        platformSize = platform.GetComponent<MeshCollider>().bounds.size;
+        platformSize = platform.GetComponent<MeshCollider>().bounds;
     }
 
     // Update is called once per frame
@@ -34,6 +35,33 @@ public class GeneratePlatforms : MonoBehaviour
                 distY = 0.0f;
             if (Mathf.Abs(transform.position.z + distZ) >= maxZ)
                 distZ = 0.0f;
+
+            //move platforms apart if they overlap
+            if (Mathf.Abs(distX) <= platformSize.size.x * separateMultiplier)
+            {
+                int randomDirection = Random.Range(1, 5);
+
+                //move in a random direction 
+                switch (randomDirection)
+                {
+                    //up
+                    case 1:
+                        distY += platformSize.size.y * separateMultiplier;
+                        break;
+                    //down
+                    case 2:
+                        distY -= platformSize.size.y * separateMultiplier;
+                        break;
+                    //left
+                    case 3:
+                        distZ += platformSize.size.z * separateMultiplier;
+                        break;
+                    //right
+                    case 4:
+                        distZ -= platformSize.size.z * separateMultiplier;
+                        break;
+                }
+            }
             
 
             transform.position = new Vector3(transform.position.x + distX,

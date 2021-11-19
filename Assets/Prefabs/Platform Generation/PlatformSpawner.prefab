@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 0}
   spawnPoint: {fileID: 0}
-  distBetween: 20
-  minDist: {x: 35, y: -30, z: -60}
-  maxDist: {x: 100, y: 30, z: 60}
+  distMinBounds: {x: 10, y: -30, z: -30}
+  distMaxBounds: {x: 60, y: 30, z: 30}
   maxY: 100
   maxZ: 100
+  separateMultiplier: 2
