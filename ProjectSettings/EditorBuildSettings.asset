@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: f7df33aac20a5a44f9e12eae1d804dc6
   - enabled: 1
     path: Assets/Scenes/MVI Scene.unity
-    guid: ab1de98ec827e27449f69e6fef407dd9
+    guid: c041c1b29ca588744b9801d660f22ab7
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: cd522260065b7574786a6ac54e6ce476
