@@ -11,10 +11,10 @@ public class PlayerMovementRB : MonoBehaviour
     float verticalMovement;
     bool isGrounded;
     public float jumpForce = 15f;
-    float groundDrag = 6f;
-    float airDrag = 2f;
-    float movementMultiplier = 10f;
-    float airMultiplier = 0.4f;
+    public float groundDrag = 6f;
+    public float airDrag = 2f;
+    public float movementMultiplier = 10f;
+    public float airMultiplier = 0.4f;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,7 @@ public class PlayerMovementRB : MonoBehaviour
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.8f + 0.1f);
         GrabInput();
+        // Drag is causing floatiness
         ControlDrag();
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
