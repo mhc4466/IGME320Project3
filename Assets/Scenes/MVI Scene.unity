@@ -378,19 +378,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: speed
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: airDrag
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: movementMultiplier
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7482717386503296708, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0de7b3fe157d26846a1f57de54b48ab0, type: 2}
     - target: {fileID: 9169435689837769113, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: mouseSensitivity
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 9169435690654893938, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: m_Enabled
