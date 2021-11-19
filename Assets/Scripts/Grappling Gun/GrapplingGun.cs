@@ -34,7 +34,7 @@ public class GrapplingGun : MonoBehaviour
         {
             StartGrapple();
         }
-        else 
+        else if(Input.GetMouseButtonUp(0))
         {
             StopGrapple();
         }
@@ -65,16 +65,23 @@ public class GrapplingGun : MonoBehaviour
             joint.spring = jointSpring;
             joint.damper = jointDamper;
             joint.massScale = springMassScale;
+
+            lr.positionCount = 2;
         }
     }
     private void StopGrapple() 
     {
-    
+        lr.positionCount = 0;
+        Destroy(joint);
     }
 
     private void DrawRope() 
     {
+        if (!joint) return; 
+        
         lr.SetPosition(0, gunTip.position);
         lr.SetPosition(1, grapplePoint);
+        
+
     }
 }
