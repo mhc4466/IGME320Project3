@@ -80,7 +80,7 @@ public class ObjectPooler : MonoBehaviour
     GameObject [OBJECT] = ObjectPooler.SharedInstance.GetPooledObject("[OBJECT TAG]"); 
     if ([OBJECT] != null) {
         [OBJECT].transform.position = [SPAWN POSITION];
-        [OBJECT].transform.rotation = [SPAWN POSITION];
+        [OBJECT].transform.rotation = [SPAWN ROTATION];
         [OBJECT].SetActive(true);
     }
 
