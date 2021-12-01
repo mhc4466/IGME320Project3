@@ -21,6 +21,9 @@ public class GrapplingGun : MonoBehaviour
     [SerializeField] private float jointDamper =7.0f;
     [SerializeField] private float springMassScale =4.5f;
     private SpringJoint joint;
+    private GameObject grappledObject;
+    private Vector3 displacement;
+    private bool connected;
     private void Awake()
     {
         //get the line renderer
@@ -38,6 +41,10 @@ public class GrapplingGun : MonoBehaviour
         {
             StopGrapple();
         }
+        else if (Input.GetMouseButton(0) && connected)
+        {
+            joint.connectedAnchor = grappledObject.transform.position + displacement;
+        }
     }
     private void LateUpdate()
     {
@@ -47,16 +54,19 @@ public class GrapplingGun : MonoBehaviour
     {
         //raycast to see if you find a point you can grapple to
         RaycastHit hit;
-        if (Physics.Raycast(camera.position,camera.forward,out hit,maxShootDistance)) 
+        if (Physics.Raycast(camera.position, camera.forward, out hit, maxShootDistance))
         {
+            connected = true;
             //set values for grapple and joint
             grapplePoint = hit.point;
             joint = player.gameObject.AddComponent<SpringJoint>();
             joint.autoConfigureConnectedAnchor = false;
             joint.connectedAnchor = grapplePoint;
+            grappledObject = hit.collider.gameObject;
+            displacement = grapplePoint - grappledObject.transform.position;
 
             //set distance for grapple point
-            float distanceFromPoint = Vector3.Distance(player.position,grapplePoint);
+            float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
 
             //values determining how the physics behave
             joint.maxDistance = distanceFromPoint * jointMaxDistance;
@@ -68,6 +78,8 @@ public class GrapplingGun : MonoBehaviour
 
             lr.positionCount = 2;
         }
+        else
+            connected = false;
     }
     private void StopGrapple() 
     {
@@ -80,7 +92,7 @@ public class GrapplingGun : MonoBehaviour
         if (!joint) return; 
         
         lr.SetPosition(0, gunTip.position);
-        lr.SetPosition(1, grapplePoint);
+        lr.SetPosition(1, grappledObject.transform.position + displacement);
         
 
     }

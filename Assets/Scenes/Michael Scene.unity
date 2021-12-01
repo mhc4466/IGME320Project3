@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.016090982, g: 0.01466979, b: 0.013826404, a: 1}
+  m_IndirectSpecularColor: {r: 0.001245432, g: 0.0011354326, b: 0.0010701551, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6332,13 +6332,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.259
       objectReference: {fileID: 0}
+    - target: {fileID: 5200826859485053886, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: speed
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: airDrag
-      value: 0.5
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: groundDrag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: airMultiplier
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: movementMultiplier
@@ -13190,8 +13202,8 @@ MonoBehaviour:
   maxShootDistance: 100
   jointMaxDistance: 0.08
   jointMinDistance: 0.25
-  jointSpring: 4.5
-  jointDamper: 7
+  jointSpring: 0.5
+  jointDamper: 0.2
   springMassScale: 4.5
 --- !u!120 &1302763089
 LineRenderer:
