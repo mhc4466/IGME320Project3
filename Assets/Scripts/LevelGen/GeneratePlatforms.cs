@@ -5,12 +5,17 @@ using UnityEngine;
 public class GeneratePlatforms : MonoBehaviour
 {
     public GameObject platform;
+    [Tooltip("SpawnPoint object transform, determines how far away new platforms spawn")]
     public Transform spawnPoint;
+    [Tooltip("Minimum x, y, and z offset between platforms")]
     public Vector3 distMinBounds;
+    [Tooltip("Maximum x, y, and z offset between platforms")]
     public Vector3 distMaxBounds;
+    [Tooltip("Limit how far up or down platforms can spawn")]
     public float maxY;      //limit how far up or down platforms can spawn
+    [Tooltip("Limit how far left or right platorms can spawn")]
     public float maxZ;      //limit how far left or right platforms can spawn
-
+    [Tooltip("Applies a multiplier to distance between platforms")]
     public float separateMultiplier;   //platforms must be separated by this multiplier
     private Bounds platformSize;
 
