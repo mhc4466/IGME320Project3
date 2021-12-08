@@ -15,7 +15,10 @@ public class PlayerMovementRB : MonoBehaviour
     public float airDrag = 2f;
     public float movementMultiplier = 10f;
     public float airMultiplier = 0.4f;
-    
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,7 @@ public class PlayerMovementRB : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.8f + 0.1f);
+        // isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         GrabInput();
         // Drag is causing floatiness
         ControlDrag();

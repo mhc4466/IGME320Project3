@@ -246,6 +246,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  jumpForce: 15
+  groundDrag: 6
+  airDrag: 2
+  movementMultiplier: 10
+  airMultiplier: 0.4
+  groundCheck: {fileID: 9169435690693256140}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!136 &7482717386503296708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -284,7 +294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9169435690693256143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.816, z: 0}
+  m_LocalPosition: {x: 0, y: -1.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9169435690654893939}
