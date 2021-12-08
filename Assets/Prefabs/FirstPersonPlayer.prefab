@@ -255,7 +255,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
 --- !u!136 &7482717386503296708
 CapsuleCollider:
   m_ObjectHideFlags: 0

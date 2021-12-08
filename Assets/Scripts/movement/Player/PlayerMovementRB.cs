@@ -19,6 +19,24 @@ public class PlayerMovementRB : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    RaycastHit slopeHit;
+    Vector3 slopeMoveDirection;
+
+    private bool OnSlope()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, 1.8f / 2 + 0.5f))
+        {
+            if (slopeHit.normal != Vector3.up)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    } 
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +47,9 @@ public class PlayerMovementRB : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.8f + 0.1f);
-        // isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        // isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.8f + 0.1f);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        Debug.Log(isGrounded);
         GrabInput();
         // Drag is causing floatiness
         ControlDrag();
@@ -39,6 +58,8 @@ public class PlayerMovementRB : MonoBehaviour
         {
             Jump();
         }
+
+        slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
     }
     void Jump()
     {
@@ -59,9 +80,13 @@ public class PlayerMovementRB : MonoBehaviour
 
     void MovePlayer()
     {
-        if (isGrounded)
+        if (isGrounded && !OnSlope())
         {
             rb.AddForce(moveDirection.normalized * speed * movementMultiplier, ForceMode.Acceleration);
+        }
+        else if (isGrounded && OnSlope())
+        {
+            rb.AddForce(slopeMoveDirection.normalized * speed * movementMultiplier, ForceMode.Acceleration);
         }
         else
         {
