@@ -62,7 +62,7 @@ public class SunMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "Platform")
         {
-            Debug.Log("Platform collide");
+            //Debug.Log("Platform collide");
             collision.gameObject.SetActive(false);
         }
     }
