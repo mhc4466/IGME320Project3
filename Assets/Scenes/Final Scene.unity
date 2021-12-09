@@ -473,7 +473,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: airDrag
-      value: 0.5
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: deathLevel
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: groundDrag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: airMultiplier
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: groundDistance
@@ -1018,12 +1030,12 @@ MonoBehaviour:
   gunTip: {fileID: 10583321}
   camera: {fileID: 916922895}
   player: {fileID: 1277274121}
-  maxShootDistance: 100
+  maxShootDistance: 230
   jointMaxDistance: 0.08
   jointMinDistance: 0.25
   jointSpring: 0.5
-  jointDamper: 0.2
-  springMassScale: 4.5
+  jointDamper: 0.05
+  springMassScale: 2
 --- !u!120 &1302763089
 LineRenderer:
   m_ObjectHideFlags: 0
