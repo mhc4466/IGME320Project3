@@ -476,6 +476,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: deathLevel
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: groundDistance
       value: 0.4
       objectReference: {fileID: 0}
