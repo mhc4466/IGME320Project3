@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class SunMovement : MonoBehaviour
 {
     public float sunBaseSpeed = 12f;
+    public float previousSunSpeed;
     public float timeScaleFactor;
     public float currentSunSpeed;
+    public float maxSunSpeed = 300f;
     public Transform player;
     float radius;
     // Start is called before the first frame update
@@ -20,9 +22,18 @@ public class SunMovement : MonoBehaviour
     void Update()
     {
         timeScaleFactor = Time.timeSinceLevelLoad;
-        currentSunSpeed = sunBaseSpeed + ((timeScaleFactor / 50) * Mathf.Abs((transform.position.x - player.position.x) / 100));
+        currentSunSpeed = sunBaseSpeed + ((timeScaleFactor / 5) * Mathf.Abs((transform.position.x - player.position.x) / 50));
+        if (currentSunSpeed > maxSunSpeed)
+        {
+            currentSunSpeed = maxSunSpeed;
+        }
+        if (currentSunSpeed < (previousSunSpeed - sunBaseSpeed))
+        {
+            currentSunSpeed = previousSunSpeed - (sunBaseSpeed / 10);
+        }
 
         transform.position = new Vector3(transform.position.x + (currentSunSpeed * Time.deltaTime), transform.position.y, transform.position.z);
+        previousSunSpeed = currentSunSpeed;
     }
 
     private bool CheckForPlayerCollision()
