@@ -477,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: deathLevel
-      value: -500
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: groundDrag
@@ -486,10 +486,6 @@ PrefabInstance:
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: airMultiplier
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
-      propertyPath: deathLevel
-      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: groundDistance
@@ -1058,9 +1054,9 @@ MonoBehaviour:
   maxShootDistance: 230
   jointMaxDistance: 0.08
   jointMinDistance: 0.25
-  jointSpring: 0.5
+  jointSpring: 2
   jointDamper: 0.05
-  springMassScale: 2
+  springMassScale: 0.5
 --- !u!120 &1302763089
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1286,8 +1282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1003}
-  m_SizeDelta: {x: 291.9417, y: 49.99109}
+  m_AnchoredPosition: {x: 0, y: -112}
+  m_SizeDelta: {x: 600, y: 49.99109}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1699076865
 MonoBehaviour:
@@ -1309,7 +1305,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Distance:'
+  m_text: 'Distance from the Sun:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -11,6 +11,7 @@ public class SunMovement : MonoBehaviour
     public float currentSunSpeed;
     public float maxSunSpeed = 300f;
     public Transform player;
+    public bool usesTimeFormula = true;
     float radius;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,13 @@ public class SunMovement : MonoBehaviour
     void Update()
     {
         timeScaleFactor = Time.timeSinceLevelLoad;
+
+        //Michael's time scale formula. Set bool to false in inspector to disable it
+        if (usesTimeFormula)
+        {
+            float x = timeScaleFactor;
+            timeScaleFactor = 9.0f * (((0.42f * (x - 70.0f)) / Mathf.Sqrt(Mathf.Pow((0.8f * x) - 70.0f, 2.0f) + 500.0f)) + .42f); //I'm sorry
+        }
         currentSunSpeed = sunBaseSpeed + ((timeScaleFactor / 5) * Mathf.Abs((transform.position.x - player.position.x) / 50));
         if (currentSunSpeed > maxSunSpeed)
         {

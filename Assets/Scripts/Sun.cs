@@ -18,7 +18,7 @@ public class Sun : MonoBehaviour
     void Update()
     {
         float sunToPlayer = Mathf.Abs( Vector3.Distance(this.transform.position, player.transform.position))+offset;
-        sunText.text = sunToPlayer.ToString("000") + " meters";
+        sunText.text = "Distance from the Sun: " + sunToPlayer.ToString("000") + " meters";
 
 
     }
