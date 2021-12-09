@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementRB : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerMovementRB : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public float deathLevel = -100.0f;
 
     RaycastHit slopeHit;
     Vector3 slopeMoveDirection;
@@ -60,6 +62,13 @@ public class PlayerMovementRB : MonoBehaviour
         }
 
         slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
+
+        if (transform.position.y < deathLevel)
+        {
+            //kill player
+            //Debug.Log("Player dies");
+            SceneManager.LoadScene(2);
+        }
     }
     void Jump()
     {
