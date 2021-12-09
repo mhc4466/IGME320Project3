@@ -51,7 +51,7 @@ public class PlayerMovementRB : MonoBehaviour
     {
         // isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.8f + 0.1f);
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        Debug.Log(isGrounded);
+        //Debug.Log(isGrounded);
         GrabInput();
         // Drag is causing floatiness
         ControlDrag();
