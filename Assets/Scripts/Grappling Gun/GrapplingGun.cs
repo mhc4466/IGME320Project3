@@ -60,7 +60,7 @@ public class GrapplingGun : MonoBehaviour
     {
         //raycast to see if you find a point you can grapple to
         RaycastHit hit;
-        if (Physics.Raycast(camera.position, camera.forward, out hit, maxShootDistance))
+        if (Physics.Raycast(camera.position, camera.forward, out hit, maxShootDistance,whatIsGrappleable.value))
         {
             connected = true;
             //set values for grapple and joint
