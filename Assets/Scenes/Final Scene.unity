@@ -493,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 13400000, guid: 0de7b3fe157d26846a1f57de54b48ab0, type: 2}
     - target: {fileID: 9169435689837769113, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: mouseSensitivity
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 9169435689837769115, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: m_RenderingPath
@@ -872,8 +872,8 @@ MonoBehaviour:
   maxShootDistance: 100
   jointMaxDistance: 0.08
   jointMinDistance: 0.25
-  jointSpring: 4.5
-  jointDamper: 7
+  jointSpring: 0.5
+  jointDamper: 0.2
   springMassScale: 4.5
 --- !u!120 &1302763089
 LineRenderer:
