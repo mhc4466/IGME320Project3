@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: deathLevel
-      value: -200
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: groundDistance
@@ -903,6 +903,10 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1010586789}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: distMinBounds.x
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9019106601441316002, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -973,6 +977,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1277274121}
+    - target: {fileID: 6545750847597050490, guid: d88a444777dfc2a458f876155a1534f3, type: 3}
+      propertyPath: renderDist
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6545750847597050491, guid: d88a444777dfc2a458f876155a1534f3, type: 3}
       propertyPath: m_RootOrder
       value: 8

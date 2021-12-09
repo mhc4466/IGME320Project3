@@ -197,6 +197,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
+      propertyPath: deathLevel
+      value: -300
+      objectReference: {fileID: 0}
     - target: {fileID: 9169435690654893939, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -360,6 +364,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1994362764}
+    - target: {fileID: 6545750847597050490, guid: d88a444777dfc2a458f876155a1534f3, type: 3}
+      propertyPath: renderDist
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6545750847597050491, guid: d88a444777dfc2a458f876155a1534f3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -475,6 +483,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: maxY
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: maxZ
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
       propertyPath: platform
       value: 
       objectReference: {fileID: 295360363}
@@ -482,6 +498,30 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 903302290}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: distMaxBounds.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: distMaxBounds.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: distMaxBounds.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: distMinBounds.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: distMinBounds.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019106601441316000, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
+      propertyPath: distMinBounds.z
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 9019106601441316002, guid: dcdd415cd03bf0942b7b4e57f7b35ba2, type: 3}
       propertyPath: m_RootOrder
       value: 3

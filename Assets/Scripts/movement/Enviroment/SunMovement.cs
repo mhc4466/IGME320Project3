@@ -56,13 +56,13 @@ public class SunMovement : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // Transition to GameOver Scene
-            //Debug.Log("Player killed");
+            Debug.Log("Player killed by sun");
             SceneManager.LoadScene("GameOver");
         }
 
         if (collision.gameObject.tag == "Platform")
         {
-            Debug.Log("Platform collide");
+            //Debug.Log("Platform collide");
             collision.gameObject.SetActive(false);
         }
     }
