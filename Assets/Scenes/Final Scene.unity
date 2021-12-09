@@ -849,6 +849,14 @@ PrefabInstance:
       propertyPath: sunSpeed
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 1488952515730956161, guid: 380cd9e113647eb438cb92a6f011e243, type: 3}
+      propertyPath: maxSunSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488952515730956161, guid: 380cd9e113647eb438cb92a6f011e243, type: 3}
+      propertyPath: sunBaseSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1488952515730956164, guid: 380cd9e113647eb438cb92a6f011e243, type: 3}
       propertyPath: m_Name
       value: Sun
