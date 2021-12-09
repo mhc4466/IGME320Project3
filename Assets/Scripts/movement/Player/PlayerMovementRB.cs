@@ -20,6 +20,7 @@ public class PlayerMovementRB : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     public float deathLevel = -100.0f;
+    private AudioSource gameMusic;
 
     RaycastHit slopeHit;
     Vector3 slopeMoveDirection;
@@ -44,6 +45,8 @@ public class PlayerMovementRB : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        gameMusic = GetComponent<AudioSource>();
+        gameMusic.Play();
     }
 
     // Update is called once per frame
@@ -65,9 +68,10 @@ public class PlayerMovementRB : MonoBehaviour
 
         if (transform.position.y < deathLevel)
         {
-            //kill player
+            // kill player and transition to GameOver Scene
             //Debug.Log("Player dies");
-            SceneManager.LoadScene(2);
+            gameMusic.Stop();
+            SceneManager.LoadScene("GameOver");
         }
     }
     void Jump()

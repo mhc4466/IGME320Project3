@@ -24,10 +24,12 @@ public class GrapplingGun : MonoBehaviour
     private GameObject grappledObject;
     private Vector3 displacement;
     private bool connected;
+    private AudioSource grappleSound;
     private void Awake()
     {
         //get the line renderer
         lr = GetComponent<LineRenderer>();
+        grappleSound = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -38,10 +40,12 @@ public class GrapplingGun : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 StartGrapple();
+                grappleSound.Play();
             }
             else if (Input.GetMouseButtonUp(0))
             {
                 StopGrapple();
+                grappleSound.Stop();
             }
             else if (Input.GetMouseButton(0) && connected)
             {

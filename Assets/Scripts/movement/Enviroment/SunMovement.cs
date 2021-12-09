@@ -13,10 +13,11 @@ public class SunMovement : MonoBehaviour
     public Transform player;
     public bool usesTimeFormula = true;
     float radius;
+    public AudioSource gameMusic;
     // Start is called before the first frame update
     void Start()
     {
-        radius = GetComponent<SphereCollider>().radius; 
+        radius = GetComponent<SphereCollider>().radius;
     }
 
     // Update is called once per frame
@@ -63,8 +64,9 @@ public class SunMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            // Transition to GameOver Scene
-            Debug.Log("Player killed by sun");
+            // kill player and transition to GameOver Scene
+            //Debug.Log("Player killed by sun");
+            gameMusic.Stop();
             SceneManager.LoadScene("GameOver");
         }
 

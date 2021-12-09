@@ -46,6 +46,5 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Player dies from being too low in level");
             SceneManager.LoadScene("GameOver");
         }
-
     }
 }
