@@ -32,23 +32,29 @@ public class GrapplingGun : MonoBehaviour
 
     private void Update()
     {
-        //get player input
-        if (Input.GetMouseButtonDown(0))
+        if (PauseMenu.GameIsPaused == false)
         {
-            StartGrapple();
-        }
-        else if(Input.GetMouseButtonUp(0))
-        {
-            StopGrapple();
-        }
-        else if (Input.GetMouseButton(0) && connected)
-        {
-            joint.connectedAnchor = grappledObject.transform.position + displacement;
+            //get player input
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartGrapple();
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                StopGrapple();
+            }
+            else if (Input.GetMouseButton(0) && connected)
+            {
+                joint.connectedAnchor = grappledObject.transform.position + displacement;
+            }
         }
     }
     private void LateUpdate()
     {
-        DrawRope();
+        if (PauseMenu.GameIsPaused == false)
+        {
+            DrawRope();
+        }
     }
     private void StartGrapple() 
     {

@@ -13,6 +13,11 @@ public class MainMenu : MonoBehaviour
     // Simple method loads main gameplay scene when called
     public void PlayGame()
     {
+        if (PauseMenu.GameIsPaused)
+        {
+            PauseMenu.GameIsPaused = false;
+            Time.timeScale = 1f;
+        }
         SceneManager.LoadScene(1);
     }
 
