@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         if(transform.position.y < deathLevel)
         {
             //kill player
-            //Debug.Log("Player dies");
+            Debug.Log("Player dies from being too low in level");
             SceneManager.LoadScene("GameOver");
         }
 
