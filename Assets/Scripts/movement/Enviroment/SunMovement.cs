@@ -43,5 +43,11 @@ public class SunMovement : MonoBehaviour
             //Debug.Log("Player killed");
             SceneManager.LoadScene("GameOver");
         }
+
+        if (collision.gameObject.tag == "Platform")
+        {
+            Debug.Log("Platform collide");
+            collision.gameObject.SetActive(false);
+        }
     }
 }
