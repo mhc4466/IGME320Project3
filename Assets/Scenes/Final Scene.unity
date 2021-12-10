@@ -1148,7 +1148,6 @@ MonoBehaviour:
   whatIsGrappleable:
     serializedVersion: 2
     m_Bits: 1024
-  cursor: {fileID: 1712068149}
   cursorComponent: {fileID: 1712068151}
   gunTip: {fileID: 10583321}
   camera: {fileID: 916922895}
@@ -1481,7 +1480,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -112}
-  m_SizeDelta: {x: 600, y: 49.99109}
+  m_SizeDelta: {x: 800, y: 49.99109}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1699076865
 MonoBehaviour:
