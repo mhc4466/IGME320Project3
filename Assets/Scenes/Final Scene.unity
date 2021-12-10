@@ -477,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: deathLevel
-      value: -150
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 5906481217207822880, guid: c2ad906a7e0752f42a5bfa2d64a75070, type: 3}
       propertyPath: groundDrag
@@ -1148,6 +1148,8 @@ MonoBehaviour:
   whatIsGrappleable:
     serializedVersion: 2
     m_Bits: 1024
+  cursor: {fileID: 1712068149}
+  cursorComponent: {fileID: 1712068151}
   gunTip: {fileID: 10583321}
   camera: {fileID: 916922895}
   player: {fileID: 1277274121}

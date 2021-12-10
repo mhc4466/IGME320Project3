@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GrapplingGun : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GrapplingGun : MonoBehaviour
     private LineRenderer lr;
     private Vector3 grapplePoint;
     [SerializeField] private LayerMask whatIsGrappleable;
+    [SerializeField] private Image cursorComponent;
     //transforms
     [SerializeField] private Transform gunTip;
     [SerializeField] private Transform camera;
@@ -36,11 +38,11 @@ public class GrapplingGun : MonoBehaviour
     {
         if (PauseMenu.GameIsPaused == false)
         {
+            ColorCursor();
             //get player input
             if (Input.GetMouseButtonDown(0))
             {
                 StartGrapple();
-                grappleSound.Play();
             }
             else if (Input.GetMouseButtonUp(0))
             {
@@ -66,6 +68,7 @@ public class GrapplingGun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxShootDistance,whatIsGrappleable.value))
         {
+            grappleSound.Play();
             connected = true;
             //set values for grapple and joint
             grapplePoint = hit.point;
@@ -105,5 +108,19 @@ public class GrapplingGun : MonoBehaviour
         lr.SetPosition(1, grappledObject.transform.position + displacement);
         
 
+    }
+
+    /// <summary>
+    /// Sets the color of the cursor to green if it is over a grappleable object, and white if it is not
+    /// </summary>
+    private void ColorCursor()
+    {
+        RaycastHit hit; //Variable to store the raycast
+        //If the raycast hits a ground object in range, set the cursor to green
+        if (Physics.Raycast(camera.position, camera.forward, out hit, maxShootDistance, whatIsGrappleable))
+            cursorComponent.color = Color.green;
+        //If the raycast doesn't reach anything within the distance, set the cursor to white
+        else
+            cursorComponent.color = Color.white;
     }
 }
